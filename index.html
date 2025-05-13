@@ -44,7 +44,7 @@
 <div class="bg-black text-white text-sm w-full overflow-hidden">
   <div class="w-max animate-marquee whitespace-nowrap py-2 flex">
     <span class="px-8">Free Shipping</span>
-    <span class="px-8">10% off on First Purchase</span>
+    <span class="px-8">15% off on First Purchase</span>
     <span class="px-8">Free Shipping</span>
     <span class="px-8">10% off on First Purchase</span>
     <span class="px-8">Free Shipping</span>
@@ -135,64 +135,54 @@
 
 <span class="text-center text-2xl font-bold mt-10 block"></span>
 
-<!-- Naya Barsha Offer Section -->
-<section class="font-['Playfair_Display']">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch">
+<!-- End of Season Sale Section -->
+<section id="seasonSaleSection" class="font-['Playfair Display'] w-full">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-stretch rounded-lg overflow-hidden shadow-xl md:shadow-lg">
 
-    <!-- Left: Full-Width Banner with Shadow -->
-    <div class="w-full shadow-xl rounded-l-lg overflow-hidden">
-      <img src="Products/Banner1.jpg" alt="New Year Offer Banner" class="w-full h-full object-cover">
-    </div>
-
-    <!-- Right: Offer Content with Shadow -->
-    <div class="flex flex-col justify-center items-center text-center px-6 py-12 space-y-6 bg-blue-900 text-white shadow-xl rounded-r-lg">
-      <!-- Title in Nepali -->
-      <h2 class="text-4xl font-bold leading-snug" style="font-family: 'Mukta', sans-serif;">
-        नयाँ वर्षमा <strong> २०.८२% </strong> छुट!
-      </h2>
-
-      <!-- Description Text -->
-      <p class="text-base sm:text-lg max-w-md">
-        Celebrate Naya Barsha with <strong>20.82% OFF</strong> on all CoversBee phone covers.
-        Treat yourself or someone special with a stylish new case!
-      </p>
-      <p class="text-base sm:text-xs max-w-md">
-        This offer is valid till the end of the first month of the New Year. Don’t miss the chance to cash in on this exclusive limited-time deal!
+    <!-- Left: Blue Promo Content Centered -->
+    <div class="bg-blue-900 text-white px-8 py-12 flex flex-col justify-center text-center space-y-6">
+      <p class="uppercase text-sm tracking-widest text-yellow-300 font-semibold">Limited Time Offer</p>
+      <h2 class="text-4xl sm:text-5xl font-extrabold">End of Season Sale</h2>
+      <h3 class="text-3xl sm:text-4xl font-bold text-yellow-400">Get 15% OFF</h3>
+      <p class="text-base sm:text-lg max-w-md mx-auto">
+        Enjoy 15% off all CoversBee phone cases. This offer ends on <strong>June 15</strong> — don’t miss it!
       </p>
 
       <!-- Countdown -->
-      <div class="flex justify-center gap-2 mt-2" style="font-family: 'Poppins', sans-serif;">
-        <div class="bg-white px-3 py-2 rounded shadow text-center">
-          <div id="days" class="text-xl font-bold text-red-600">00</div>
-          <div class="text-xs font-medium mt-1 text-red-600">Days</div>
+      <div class="flex justify-center gap-3 mt-4 font-mono text-white text-lg">
+        <div class="bg-white px-4 py-3 rounded-md text-center w-20">
+          <div id="timer-days" class="text-xl font-bold text-red-500">00</div>
+          <div class="text-xs mt-1 font-semibold text-red-500">Days</div>
         </div>
-        <div class="bg-white px-3 py-2 rounded shadow text-center">
-          <div id="hours" class="text-xl font-bold text-red-600">00</div>
-          <div class="text-xs font-medium mt-1 text-red-600">Hours</div>
+        <div class="bg-white px-4 py-3 rounded-md text-center w-20">
+          <div id="timer-hours" class="text-xl font-bold text-red-500">00</div>
+          <div class="text-xs mt-1 font-semibold text-red-500">Hours</div>
         </div>
-        <div class="bg-white px-3 py-2 rounded shadow text-center">
-          <div id="minutes" class="text-xl font-bold text-red-600">00</div>
-          <div class="text-xs font-medium mt-1 text-red-600">Minutes</div>
+        <div class="bg-white px-4 py-3 rounded-md text-center w-20">
+          <div id="timer-minutes" class="text-xl font-bold text-red-500">00</div>
+          <div class="text-xs mt-1 font-semibold text-red-500">Minutes</div>
         </div>
-        <div class="bg-white px-3 py-2 rounded shadow text-center">
-          <div id="seconds" class="text-xl font-bold text-red-600">00</div>
-          <div class="text-xs font-medium mt-1 text-red-600">Seconds</div>
+        <div class="bg-white px-4 py-3 rounded-md text-center w-20">
+          <div id="timer-seconds" class="text-xl font-bold text-red-500">00</div>
+          <div class="text-xs mt-1 font-semibold text-red-500">Seconds</div>
         </div>
       </div>
 
-      <!-- CTA Button -->
-      <a href="#Sales" class="mt-4 inline-block bg-yellow-400 text-black px-6 py-3 rounded font-semibold hover:bg-white hover:text-blue-900 transition">
-        Shop Now
-      </a>
-      <p class="text-xs mt-1 text-yellow-200">Use : <span class="italic">Newyearnewcover</span></p>
+      <a href="#Sales" onclick="filterNayaBarsha()" 
+      class="mt-6 inline-block bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-900 transition font-sans">
+      Shop Now
+    </a>
+    </div>
+
+    <!-- Right: Promo Image -->
+    <div class="w-full shadow-xl md:shadow-lg overflow-hidden">
+      <img src="Ad Banner.jpg" alt="End of Season Banner" class="w-full h-full object-cover" />
     </div>
   </div>
 </section>
 
-<!-- Countdown Timer Script -->
 <script>
-  // Set countdown to end of Baisakh (around May 13, 2025)
-  const endDate = new Date("2025-05-13T23:59:59").getTime();
+  const endDate = new Date("2025-06-15T23:59:59").getTime();
 
   const timer = setInterval(() => {
     const now = new Date().getTime();
@@ -200,10 +190,10 @@
 
     if (timeLeft <= 0) {
       clearInterval(timer);
-      document.getElementById("days").textContent = "00";
-      document.getElementById("hours").textContent = "00";
-      document.getElementById("minutes").textContent = "00";
-      document.getElementById("seconds").textContent = "00";
+      document.getElementById("timer-days").textContent = "00";
+      document.getElementById("timer-hours").textContent = "00";
+      document.getElementById("timer-minutes").textContent = "00";
+      document.getElementById("timer-seconds").textContent = "00";
       return;
     }
 
@@ -212,16 +202,30 @@
     const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-    document.getElementById("days").textContent = String(days).padStart(2, '0');
-    document.getElementById("hours").textContent = String(hours).padStart(2, '0');
-    document.getElementById("minutes").textContent = String(minutes).padStart(2, '0');
-    document.getElementById("seconds").textContent = String(seconds).padStart(2, '0');
+    document.getElementById("timer-days").textContent = String(days).padStart(2, '0');
+    document.getElementById("timer-hours").textContent = String(hours).padStart(2, '0');
+    document.getElementById("timer-minutes").textContent = String(minutes).padStart(2, '0');
+    document.getElementById("timer-seconds").textContent = String(seconds).padStart(2, '0');
   }, 1000);
 </script>
 
+<div class="w-full py-6 flex justify-center">
+  <div class="relative w-full max-w-md px-4">
+    <input type="text" id="modelSearch" placeholder="Search..."
+      class="w-full h-12 pl-5 pr-10 rounded-full border border-yellow-400 bg-gray-100 text-sm font-medium text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+
+    <div id="clearBtnWrapper"
+      class="absolute right-3 top-1/2 -translate-y-1/2 h-7 w-7 flex items-center justify-center rounded-full transition duration-200"
+      style="background-color: #fcb439;">
+      <img id="searchIcon"
+        src="https://www.svgrepo.com/show/7109/search.svg"
+        class="h-3.5 w-3.5 invert pointer-events-none" alt="Search" />
+    </div>
+  </div>
+</div>
 
 <!-- Category Tabs -->
-<section id="Sales" class="text-center font-semibold mt-10">
+<section id="Sales" class="text-center font-semibold ">
   <div class="flex flex-wrap justify-center gap-4 md:gap-8 pb-2 text-base sm:text-lg md:text-xl">
     <button onclick="showCategory('Classic')" id="tab-Classic"
       class="px-3 pb-2 border-b-4 border-blue-500 transition-all font-medium">
@@ -362,6 +366,28 @@
 </body>
 
 <script>
+
+  const allIphoneModels = [
+    "XR", "XS",
+    "11P", "11PM", "11R",
+    "12P", "12PM",
+    "13P", "13PM", "13R",
+    "14P", "14PL", "14PM", "14R",
+    "15P", "15PL", "15PM", "15R",
+    "16P", "16PL", "16PM", "16R"
+  ];
+  
+  let inventoryData = [];
+
+  fetch("https://opensheet.elk.sh/1O1rjh_eY8h0UYSO7okmPbudsrMVzz39EsTZIq3DcNJU/Inventory")
+  .then(response => response.json())
+  .then(data => {
+    inventoryData = data;
+  })
+  .catch(err => {
+    console.error("Error loading inventory data:", err);
+  });
+  
   async function getSequentialImages(baseUrl, maxTries = 50) {
   const images = [];
   let index = 1;
@@ -408,6 +434,63 @@
     .catch(error => {
       console.error("Error fetching or parsing data:", error);
     });
+
+    function updateColorBadges(productName, selectedModel, index) {
+      const colorContainer = document.getElementById(`colorBadges_${productName.replace(/\s+/g, '_')}_${index}`);
+      if (!colorContainer || !inventoryData || inventoryData.length === 0) return;
+
+      // Filter inventory by product and model where remaining > 0
+      const matchingInventory = inventoryData.filter(row =>
+        row["Item name"]?.trim().toLowerCase() === productName.trim().toLowerCase() &&
+        row["Phone Type"]?.toUpperCase().replace(/\s/g, '') === selectedModel.toUpperCase() &&
+        parseInt(row["Remaining"]?.toString().trim()) > 0
+      );
+
+      // Group by color and track remaining quantity
+      const colorMap = {};
+
+      matchingInventory.forEach(row => {
+        const color = row["Color"]?.trim();
+        const remaining = parseInt(row["Remaining"]?.toString().trim());
+
+        if (color && !isNaN(remaining)) {
+          if (!colorMap[color] || remaining < colorMap[color]) {
+            colorMap[color] = remaining; // keep the lowest remaining per color
+          }
+        }
+      });
+
+      const colorEntries = Object.entries(colorMap); // [ [color, remaining], ... ]
+
+      const badgeHTML = colorEntries.length > 0
+        ? colorEntries.map(([colorEntry, quantity]) => {
+            const match = colorEntry.match(/^(.+)\(#([0-9a-fA-F]{6})\)$/);
+            let label = colorEntry;
+            let hex = "#000000";
+
+            if (match) {
+              label = match[1].trim();
+              hex = `#${match[2]}`;
+            } else {
+              label = colorEntry;
+              hex = colorEntry.toLowerCase(); // fallback to CSS color name
+            }
+
+            const lowStockBadge = quantity <= 2
+              ? `<span class="ml-2 text-xs text-red-500 font-semibold">(Only ${quantity} left)</span>`
+              : '';
+
+            return `<span class="px-3 py-1 rounded-full text-sm border font-medium mr-1 mb-1 inline-block text-white shadow"
+                      style="background-color: ${hex};">
+                      ${label}${lowStockBadge}
+                    </span>`;
+          }).join('')
+        : '<span class="text-gray-500 text-sm">Out of stock</span>';
+
+      colorContainer.innerHTML = badgeHTML;
+    }
+
+
 
   function LoadProducts(products) {
     const section = document.getElementById("popularSection");
@@ -474,7 +557,7 @@
       showDynamicModal(item, index,getImages);
 
       const card = `
-        <div class="border-2 border-black bg-white p-2">
+        <div class="border-2 border-black bg-white p-2 product-card" data-models="${item.model.toLowerCase()}">
           <div class="relative group w-full h-auto cursor-pointer overflow-hidden" onclick="openModal('${modalId}')">
             <img src="${imgMain}" alt="${item.productName}" 
               class="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-110" />
@@ -503,7 +586,7 @@
       showDynamicModal(item, index,getImages);
 
       const card = `
-        <div class="border-2 border-black bg-white p-2">
+        <div class="border-2 border-black bg-white p-2 product-card" data-models="${item.model.toLowerCase()}">
           <div class="relative group w-full h-auto cursor-pointer overflow-hidden" onclick="openModal('${modalId}')">
             <img src="${imgMain}" alt="${item.productName}" 
               class="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-110" />
@@ -532,7 +615,7 @@
       const imgMain = getImages[0];
       showDynamicModal(item, index,getImages);
       const card = `
-        <div class="border-2 border-black bg-white p-2">
+        <div class="border-2 border-black bg-white p-2 product-card" data-models="${item.model.toLowerCase()}">
           <div class="relative group w-full h-auto cursor-pointer overflow-hidden" onclick="openModal('${modalId}')">
             <img src="${imgMain}" alt="${item.productName}" 
               class="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-110" />
@@ -564,18 +647,37 @@
   modalContainer.innerHTML = modalHTML;
   document.body.appendChild(modalContainer.firstElementChild);
 }
+  function handleModelChange(selectEl, productName, index, price) {
+    const selectedModel = selectEl.value.trim();
+    const statusEl = document.getElementById(`modelStatus_${productName.replace(/\s+/g, '_')}_${index}`);
+
+    if (selectEl.selectedOptions[0] && !selectEl.selectedOptions[0].disabled) {
+      statusEl.textContent = `Available`;
+      statusEl.classList.remove('text-red-600');
+      statusEl.classList.add('text-green-600');
+    } else {
+      statusEl.textContent = `❌ Currently out of stock, check other items out.`;
+      statusEl.classList.remove('text-green-600');
+      statusEl.classList.add('text-red-600');
+    }
+
+    updateColorBadges(productName, selectedModel, index); // ← call to update colors
+}
 
   function createModalHTML(product, index, imgLinks) {
   const modalId = `dynamic_${product.productName}_Modal${index}`;
   const modalImageId = `mainImage_${product.productName.replace(/\s+/g, '_')}_${index}`;
+  const availableModels = product.model.split(',').map(m => m.trim().toLowerCase());
+  const modelOptions = allIphoneModels.map(model => {
+    const isAvailable = availableModels.includes(model.toLowerCase());
+    return `<option value="${model}" ${isAvailable ? '' : 'disabled'}>
+              ${model}${isAvailable ? '' : ' - Not Available'}
+            </option>`;
+  }).join('');
 
-  const colors = product.avaColor !== "—" ? product.avaColor.split(',').map(color =>
-    `<span class="bg-gray-800 text-white px-3 py-1 rounded-full text-sm">${color.trim()}</span>`
-  ).join('') : '<span class="text-gray-500 text-sm">N/A</span>';
-
-  const models = product.model.split(',').map(model =>
-    `<span class="bg-gray-100 px-3 py-1 rounded-full text-sm">${model.trim()}</span>`
-  ).join('');
+  // const models = product.model.split(',').map(model =>
+    //`<span class="bg-gray-100 px-3 py-1 rounded-full text-sm">${model.trim()}</span>`
+  //).join('');
 
   const offerHTML = product.offerName !== "—" ? `
     <div class="space-y-2">
@@ -597,7 +699,7 @@
 `;
   return `
     <div id="${modalId}" class="fixed inset-0 z-50 hidden bg-black bg-opacity-70 flex items-center justify-center p-2 sm:p-4 overflow-y-auto">
-      <div class="bg-white w-full max-w-[95vw] sm:max-w-2xl md:max-w-3xl lg:max-w-5xl max-h-[95vh] overflow-y-auto rounded-2xl shadow-2xl grid grid-cols-1 md:grid-cols-2 relative">
+      <div class="bg-white w-full max-w-screen-sm sm:max-w-2xl md:max-w-3xl lg:max-w-5xl max-h-[95vh] overflow-y-auto rounded-2xl shadow-2xl md:shadow-lg grid grid-cols-1 md:grid-cols-2 relative">
         <button onclick="closeModal('${modalId}')" class="absolute top-4 right-4 text-3xl text-blue-700 hover:text-blue-900 font-bold">&times;</button>
         <!-- Image Section -->
       <div class="p-4 sm:p-6 flex flex-col sm:flex-col items-center justify-center">
@@ -607,17 +709,32 @@
         </div>
           <img id="${modalImageId}" src="${imgLinks[0]}" 
             onclick="openFullImage(this.src)"
-            class="cursor-zoom-in w-40 sm:w-64 md:w-full max-w-xs md:max-w-sm rounded-lg object-cover transition-transform duration-300 hover:scale-105" />
+            class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg max-h-[55vh] object-contain rounded-lg transition-transform duration-300 hover:scale-105" />
       </div>
       </div>
         <!-- Info Section -->
         <div class="p-6 md:p-8 text-black space-y-5" style="font-family: 'Poppins', sans-serif;">
-          <h2 class="text-2xl sm:text-3xl font-bold">${product.productName}</h2>
+          <div class="relative">
+            <h2 class="text-2xl sm:text-3xl font-bold">${product.productName}</h2>
+
+            ${product.badgeBanner === "Limited Stock" ? `
+              <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpng.pngtree.com%2Fpng-clipart%2F20230802%2Foriginal%2Fpngtree-limited-stock-stamp-aged-damaged-high-vector-picture-image_9297297.png&f=1&nofb=1&ipt=54654b2def249d7c764f08288685ac64f4256744c24c8b4e83a2b87e9da35337"
+                  alt="Limited Stock" 
+                  class="absolute -top-6 right-12 sm:-top-6 sm:-right-4 h-20 sm:h-28 w-auto z-30 object-contain pointer-events-none" />` : ''}
+          </div>
           ${offerHTML}
-          <p class="text-sm font-semibold mb-2 mt-4">Compatible Models</p>
-          <div class="flex gap-2 flex-wrap">${models}</div>
+          <p class="text-sm font-semibold mb-2 mt-4">Select Your Model</p>
+          <select onchange="handleModelChange(this, '${product.productName}', ${index}, ${product.price})"
+                  class="w-full p-2 border border-gray-300 rounded text-sm">
+            <option disabled selected value="">Choose model</option>
+            ${modelOptions}
+          </select>
+          <div id="modelStatus_${product.productName.replace(/\s+/g, '_')}_${index}" 
+              class="mt-2 text-sm font-semibold text-red-600"></div>
           <p class="text-sm font-semibold mb-2 mt-4">Available Colors</p>
-          <div class="flex gap-2 flex-wrap">${colors}</div>
+          <div id="colorBadges_${product.productName.replace(/\s+/g, '_')}_${index}" class="flex gap-2 flex-wrap">
+            <span class="text-gray-500 text-sm">Choose model to view colors</span>
+          </div>
           <h3 class="font-semibold mt-4 mb-1">Description</h3>
           <p class="text-sm text-gray-700 leading-relaxed">${product.desc}</p>
 
@@ -663,14 +780,63 @@ function openFullImage(src) {
         &times;
       </button>
       <img src="${src}" 
-        class="max-h-[90vh] max-w-[95vw] object-contain rounded shadow-xl" />
+        class="max-h-[90vh] max-w-[95vw] object-contain rounded shadow-xl md:shadow-lg" />
     </div>
   `;
 
   document.body.appendChild(zoomOverlay);
 }
 
+const searchInput = document.getElementById("modelSearch");
+const clearBtnWrapper = document.getElementById("clearBtnWrapper");
+const searchIcon = document.getElementById("searchIcon");
+const categorySections = ["Classic", "Funky", "Luxury"];
 
+searchInput.addEventListener("input", function () {
+  const query = this.value.toLowerCase().trim();
+  const hasText = query.length > 0;
+
+  // Filter logic
+  categorySections.forEach(categoryId => {
+    const section = document.getElementById(categoryId);
+    const cards = section.querySelectorAll(".product-card");
+
+    let matchFound = false;
+
+    cards.forEach(card => {
+      const models = card.getAttribute("data-models") || "";
+      const match = models.includes(query);
+      card.style.display = match || !hasText ? "" : "none";
+      if (match) matchFound = true;
+    });
+
+    section.style.display = matchFound || !hasText ? "" : "none";
+  });
+
+  // Icon update
+  if (hasText) {
+    clearBtnWrapper.innerHTML = `<span class="text-white text-base font-bold">✕</span>`;
+    clearBtnWrapper.style.backgroundColor = "#3b82f6"; // blue
+    clearBtnWrapper.style.cursor = "pointer";
+  } else {
+    clearBtnWrapper.innerHTML = `<img id="searchIcon" src="https://www.svgrepo.com/show/7109/search.svg" class="h-4 w-4 invert pointer-events-none" alt="Search" />`;
+    clearBtnWrapper.style.backgroundColor = "#fcb439"; // black
+    clearBtnWrapper.style.cursor = "default";
+  }
+});
+
+// Clear when ✕ is clicked
+clearBtnWrapper.addEventListener("click", function () {
+  if (searchInput.value.trim().length > 0) {
+    searchInput.value = "";
+    searchInput.dispatchEvent(new Event("input"));
+    searchInput.focus();
+  }
+});
+
+searchInput.addEventListener("keydown", function (e) {
+  if (e.key === "Enter") e.preventDefault();
+});
 
 </script>
 
